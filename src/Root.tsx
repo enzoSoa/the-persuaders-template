@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {HelloWorld} from './HelloWorld';
 import {Logo} from './HelloWorld/Logo';
+import {FoldersIntroScene} from "./scenes/FolderIntro/FoldersIntro.scene";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -21,6 +22,18 @@ export const RemotionRoot: React.FC = () => {
 				defaultProps={{
 					titleText: 'Welcome to Remotion',
 					titleColor: 'black',
+				}}
+			/>
+			<Composition
+				id="thePersuaders"
+				width={1920}
+				height={1080}
+				fps={30}
+				durationInFrames={150}
+				component={FoldersIntroScene}
+				defaultProps={{
+					leftName: "name 1",
+					rightName: "name 2"
 				}}
 			/>
 			{/* Mount any React component to make it show up in the sidebar and work on it individually! */}
