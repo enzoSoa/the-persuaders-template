@@ -27,12 +27,13 @@ export const verticalBackgroundWindow = {
   flexDirection: "column",
   alignItems: "center",
   gap: "20px",
+  padding: "20px",
   justifyContent: "center"
 }
 
 export const verticalBackgroundMedia = {
   width: "1060px",
-  height: "395px",
+  height: "calc(100% - 40px)",
   objectFit: "cover",
   border: "5px solid #000",
   filter: "saturate(2.5) contrast(0.4) blur(2px) contrast(2.5) sepia(0.4) saturate(1.3) blur(1px) grayscale(0.2)"
@@ -49,7 +50,7 @@ export const verticalBackgroundText = {
 
 export const verticalBackgroundTextBox = {
   width: "1060px",
-  height: "395px",
+  height: "calc(100% - 40px)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center"
