@@ -1,0 +1,60 @@
+{
+  "leftPersona": {
+    "name": "Lucy Amil",
+    "portraits": [
+      "lucy1.jpeg",
+      "lucy2.jpeg",
+      "lucy5.jpeg",
+      "lucy6.jpeg"
+    ],
+    "memories": [
+      "lucy_memory1.jpeg",
+      "lucy_memory2.png",
+      "lucy_memory3.png",
+      "lucy_memory4.png",
+      "lucy_memory5.png",
+      "lucy_memory6.png",
+      "lucy_memory7.png"
+    ]
+  },
+  "rightPersona": {
+    "name": "Rose Red",
+    "portraits": [
+      "rose1.jpeg",
+      "rose2.jpeg",
+      "rose3.jpeg",
+      "rose4.jpeg",
+      "rose5.jpeg",
+      "rose6.jpeg"
+    ],
+    "memories": [
+      "rose_memory1.png",
+      "rose_memory2.png",
+      "rose_memory3.png",
+      "rose_memory8.mp4",
+      "rose_memory4.png"
+    ]
+  },
+  "parts": [
+    [
+      {
+        "type": "text",
+        "data": "Curtis and Moore"
+      },
+      {
+        "type": "media",
+        "data": "rose_memory8.mp4"
+      }
+    ],
+    [
+      {
+        "type": "media",
+        "data": "rose_memory8.mp4"
+      },
+      {
+        "type": "text",
+        "data": "Curtis and Moore"
+      }
+    ]
+  ]
+}
