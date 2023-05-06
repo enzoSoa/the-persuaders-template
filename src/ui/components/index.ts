@@ -1,1 +1,2 @@
-export * from "./bigColoredPicture"
+export * from "./BigColoredPicture"
+export * from "./MediaLoader"

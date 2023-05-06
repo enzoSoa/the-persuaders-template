@@ -1,6 +1,6 @@
 import {Persona} from "../../ThePersuaders";
 import {useMemo} from "react";
-import {random, useCurrentFrame, useVideoConfig} from "remotion";
+import {useCurrentFrame, useVideoConfig} from "remotion";
 import {BigColoredPicture} from "../../ui";
 import {SideToSideResumePortrait} from "./SideToSideResume.portrait";
 
@@ -9,7 +9,7 @@ interface Props {
   color: string;
 }
 
-export function SideToSideResumePresentation({persona: {name, memories, portraits}, color}: Props) {
+export function SideToSideResumePresentation({persona: {memories, portraits}, color}: Props) {
   const {durationInFrames} = useVideoConfig();
   const frame = useCurrentFrame();
 
@@ -19,12 +19,8 @@ export function SideToSideResumePresentation({persona: {name, memories, portrait
   const portraitsDuration = useMemo(() => durationInFrames / portraits.length, [memories]);
   const currentPortraitFrames = useMemo(() => Math.floor(frame/portraitsDuration), [frame, portraitsDuration])
 
-
-  const xPosition = useMemo(() => 10 - Math.round(random(`x${name}${frame}`) * 20), [name, frame]);
-  const yPosition = useMemo(() => 10 - Math.round(random(`y${name}${frame}`) * 20), [name, frame]);
-
   return <div style={{position: "relative"}}>
     <SideToSideResumePortrait imgPath={portraits[currentPortraitFrames]} />
-    <BigColoredPicture imgPath={memories[currentMemoriesFrame]} color={color} objectContain={`${xPosition}px ${yPosition}px`}/>
+    <BigColoredPicture imgPath={memories[currentMemoriesFrame]} color={color}/>
   </div>;
 }

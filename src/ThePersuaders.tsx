@@ -47,6 +47,7 @@ export function ThePersuaders() {
       "rose_memory1.png",
       "rose_memory2.png",
       "rose_memory3.png",
+      "rose_memory8.mp4",
       "rose_memory4.png",
       "rose_memory5.png",
       "rose_memory6.png",
