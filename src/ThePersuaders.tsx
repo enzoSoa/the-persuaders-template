@@ -2,6 +2,8 @@ import {Sequence, useVideoConfig} from "remotion";
 import {FoldersIntroScene} from "./scenes/FolderIntro";
 import {FirstPicturesScene} from "./scenes/FirstPictures";
 import {SideToSideResumeScene} from "./scenes/SideToSideResume/SideToSideResume.scene";
+import {VerticalParts, VerticalScenePart} from "./scenes/VerticalPictures/VerticalPictures";
+import {SoundTrack} from "./scenes/SoundTrack/SoundTrack";
 
 export type Persona = {
   name: string;
@@ -55,7 +57,21 @@ export function ThePersuaders() {
     ]
   };
 
+  const parts: VerticalScenePart[] = [
+    [
+      {type: "text", data: "Curtis and Moore"},
+      {type: "media", data: "rose_memory8.mp4"}
+    ],
+    [
+      {type: "media", data: "rose_memory8.mp4"},
+      {type: "text", data: "Curtis and Moore"}
+    ]
+  ];
+
   return <>
+    <Sequence>
+      <SoundTrack/>
+    </Sequence>
     <Sequence durationInFrames={fps * 5}>
       <FoldersIntroScene leftName={leftPersona.name} rightName={rightPersona.name} />
     </Sequence>
@@ -64,6 +80,9 @@ export function ThePersuaders() {
     </Sequence>
     <Sequence from={fps * 6} durationInFrames={fps * 16}>
       <SideToSideResumeScene leftPersona={leftPersona} rightPersona={rightPersona}/>
+    </Sequence>
+    <Sequence from={fps * 21}>
+      <VerticalParts parts={parts}/>
     </Sequence>
   </>;
 }

@@ -1,11 +1,10 @@
 import {Composition} from 'remotion';
 import {ThePersuaders} from "./ThePersuaders";
-
-// Each <Composition> is an entry in the sidebar!
+import "./fonts.css"
 
 export const RemotionRoot: React.FC = () => {
 	const fps = 30;
-	const durationInFrames = fps * 68;
+	const durationInFrames = fps * 69.1;
 
 	return (
 		<>
